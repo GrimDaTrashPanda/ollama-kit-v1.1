@@ -1,0 +1,26 @@
+# containers & images
+*.tar
+*.tar.gz
+*.tgz
+*.img
+*.iso
+*.qcow2
+
+# models
+*.gguf
+models/
+**/models/
+
+# caches/logs/venvs
+__pycache__/
+*.pyc
+*.log
+*.bak
+.venv/
+env/
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

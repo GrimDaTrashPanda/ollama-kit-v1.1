@@ -1,0 +1,5 @@
+v1.1
+2025-08-09
+- Current working stack copied from MX (venv + Podman-based Ollama)
+- Includes GUI, launcher, and desktop file
+- Added requirements.txt export

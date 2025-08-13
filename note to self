@@ -1,0 +1,44 @@
+cat > ~/Forge/ollama-kit-v1.1/README.md <<'EOF'
+Ollama-Kit v1.1 – Portable AI Stack
+===================================
+
+WHAT THIS IS:
+-------------
+This folder is a complete, portable AI stack that runs inside a Podman container.
+It includes:
+- The Ollama server container (v0.11.4)
+- All currently downloaded models (mistral, llama3, phi, gemma, qwen, codellama, etc.)
+- Gramified GUI Python script for interacting with models
+- Model data mounted to ~/.ollama inside the container
+- Any supporting launch scripts or shortcuts
+
+WHY IT'S COOL:
+--------------
+- Fully self-contained: copy this folder to another Linux machine with Podman + Python and run without re-downloading models.
+- No Docker or systemd required.
+- Works offline once copied.
+- Preserves exact versions of models and Ollama server.
+
+HOW TO USE ON ANOTHER MACHINE:
+------------------------------
+1. Install Podman and Python 3 (with Tkinter) on the new machine.
+2. Copy this `ollama-kit-v1.1` folder to the same path on the new machine.
+3. Load the container image (if included as `.tar`):
+   podman load -i ollama_v0.11.4.tar
+4. Start the container:
+   podman run -d --name ollama -p 11434:11434 \
+     -v $HOME/.ollama:/root/.ollama \
+     --security-opt label=disable \
+     docker.io/ollama/ollama:0.11.4
+5. Run the Gramified GUI:
+   python3 ~/Forge/ollama-kit-v1.1/gramified_gui.py
+
+NOTES:
+------
+- Models are stored in ~/.ollama inside this kit – no internet needed unless adding more models.
+- You can update Ollama in the container with:
+   podman pull docker.io/ollama/ollama:<version>
+   (then restart the container)
+- If a model isn't showing up in the GUI, check AVAILABLE_MODELS in gramified_gui.py
+
+EOF

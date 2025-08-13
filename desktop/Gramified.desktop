@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Gramified AI
+Comment=Launch Gramified GUI (Ollama via Podman)
+Type=Application
+Terminal=false
+Exec=/home/grim/bin/gramified-launch.sh
+Icon=utilities-terminal
+Categories=Utility;Development;
+StartupNotify=false
