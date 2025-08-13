@@ -1,3 +1,13 @@
+## Full AI Stack Download
+The complete Ollama Kit v1.1 (container + models) is available here:  
+[Direct ZIP Download – 17.6 GB](https://archive.org/download/ollama-kit-v1.1-full-container/ollama-kit-v1.1-full-container.zip)  
+[Optional Torrent Download](https://archive.org/download/ollama-kit-v1.1-full-container/ollama-kit-v1.1-full-container_archive.torrent)
+
+> Note: This release includes all models and the pre-built Ollama container.  
+> For a code-only setup (no models or container), see this repository.
+
+---
+
 Ollama-Kit v1.1 – Portable AI Stack
 ===================================
 
